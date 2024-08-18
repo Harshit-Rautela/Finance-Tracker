@@ -1,0 +1,49 @@
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(107, 107, 204);
+    align-items: center;/* Centers the content horizontally */
+    justify-content: center;/* Centers the content vertically */
+}
+
+.main-form {
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    background-color: yellow;
+    width: 550px;
+    padding: 5px;
+    color: black;
+
+}
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: greenyellow;
+    margin: 10px;
+    flex-grow: 1; /* Allows the form to grow and fill available space within the container */
+    padding-top: 0px;
+    padding-left:  25px;
+    padding-right:  25px;
+    /* justify-content: center;  */
+    align-items: center; 
+}
+
+.button{
+    background-color: blue;
+    
+    align-items: center;
+}
+.button:hover{
+    background-color: red;
+    text-decoration: underline;
+}
+.label{
+    width: 300px;
+
+}
