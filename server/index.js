@@ -4,6 +4,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import SignUpRouter from "./routes/SignUpRoute.js";
 import LogInRouter from "./routes/LogInRoute.js";
+import UserRouter from "./routes/UserRoute.js";
 const app = express();
 dotenv.config();
 
@@ -13,8 +14,9 @@ const MongoDBURL = process.env.MONGODBURL;
 app.use(cors());
 app.use(express.json());
 
-app.use("/user", SignUpRouter);
-app.use("/user", LogInRouter);
+app.use("/", SignUpRouter);
+app.use("/", LogInRouter);
+app.use("/user",UserRouter)
 
 app.get("/", (req, res) => {
   console.log("The request is", req);

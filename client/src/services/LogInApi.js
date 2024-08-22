@@ -3,7 +3,7 @@ import axios from "axios";
 export const LogInFunction = async (formdata) => {
   try {
     const response = await axios.post(
-      "http://localhost:5555/user/LogIn",
+      "http://localhost:5555/LogIn",
       formdata,
       {
         headers: {

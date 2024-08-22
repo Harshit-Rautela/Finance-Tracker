@@ -16,7 +16,7 @@ const SignUp = () => {
       const data = await SignUpFunction(formData);
       localStorage.setItem("token", data.token);
       console.log("token:", data.token);
-      navigate("/");
+      navigate("/home");
     } catch (error) {
       console.log("The signup was not successful:", error);
     }

@@ -3,7 +3,7 @@ import axios from "axios";
 export const SignUpFunction = async (formdata) => {
   try {
     const response = await axios.post(
-      "http://localhost:5555/user/SignUp",
+      "http://localhost:5555/SignUp",
       formdata,
       {
         headers: {

@@ -12,27 +12,7 @@ const PaymentDetails = () => {
   const navigate = useNavigate()
   const handleSubmit = async(e)=>{
     e.preventDefault();
-    try {
-      const { data } = await axios.post(
-        "https://stripe-intent-mauve.vercel.app/create-payment-intent",
-        {
-          amount:amount,
-          currency:currency, 
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
-      // Extract clientSecret from backend response
-      const { clientSecret } = data;
-      //these all query parameters are taken to the payment within url, now I can use useParams() to extract them in the PaymentDetails.jsx
-      navigate(`/payment?amount=${amount}&currency=${currency}&recipient=${recipient}&description=${description}&category=${category}&clientSecret=${clientSecret}`);
-    } catch (err) {
-      console.error(err.message);
-    }
+   
     
   }
   return (

@@ -15,7 +15,7 @@ const LogIn = () => {
     const data = await LogInFunction(formData);
       console.log("LogIn successful",data)
       localStorage.setItem('token',data.token);
-      navigate('/');     
+      navigate('/home');     
     } catch (error) {
       console.log("The login was unsuccessful:",error);      
     }   
