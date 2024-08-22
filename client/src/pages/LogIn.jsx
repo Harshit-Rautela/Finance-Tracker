@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 import { useNavigate } from 'react-router-dom'
-import { LogInFunction } from '../services/LogInApi'
 
 import '../css/LogIn.css'
+import { LogInFunction } from '../services/LogInApi'
 const LogIn = () => {
   const [name,setName] = useState("")
   const [email,setEmail] = useState("")
@@ -11,12 +11,11 @@ const LogIn = () => {
   const handleSubmit=async(e)=>{
     e.preventDefault();
     try {
-      const formData = {name, email,password};
+      const formData = {email,password};
     const data = await LogInFunction(formData);
       console.log("LogIn successful",data)
-      console.log(data.$id);
-      localStorage.setItem('token',data.$id);
-      navigate('/home');     
+      localStorage.setItem('token',data.token);
+      navigate('/');     
     } catch (error) {
       console.log("The login was unsuccessful:",error);      
     }   

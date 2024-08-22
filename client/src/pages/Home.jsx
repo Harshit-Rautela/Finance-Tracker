@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import '../css/Home.css'
-import { getUserDetails } from '../services/UserDetailsApi'
+// import { getUserDetails } from '../services/UserDetailsApi'
 import { Link } from 'react-router-dom';
 const Home = () => {
     const [user,setUser] = useState(null);
     useEffect(()=>{
         const fetchUserData = async()=>{
-            const userData = await getUserDetails();
+            // const userData = await getUserDetails();
             // console.log(userData)
             setUser(userData);
         }
